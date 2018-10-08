@@ -295,7 +295,7 @@
     display: block; }
   .hidden-xs {
     display: none; }
-  .header .case {
+  .header__content .case {
     max-width: 320px; }
   .header__links {
     display: block;
@@ -648,7 +648,9 @@
   .popup__title, .popup__input, .popup__textarea {
     margin-bottom: 15px; }
   .popup__wrap {
-    margin-top: 25px; } }
+    margin-top: 25px; }
+  .subpage {
+    padding-bottom: 20px; } }
 
 @media screen and (max-width: 420px) {
   .apps {
