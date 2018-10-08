@@ -38,6 +38,9 @@ li
 	display: block
 	list-style-image: none
 
+u
+	text-decoration: none
+
 a
 	color: $color-1
 	text-decoration: none
@@ -73,6 +76,8 @@ input, textarea, button
 		font-family: $font-family-1
 		background: white
 		width: 100%
+		&_error
+			border-color: #f93446
 	&_border-gray
 		.input
 			&__title
@@ -107,6 +112,37 @@ input, textarea, button
 				height: 44px
 				padding: 0 18px
 
+
+.textarea
+	&_border-gray
+		.textarea
+			&__title
+				font-size: 15px
+				color: #959b9f
+				text-transform: uppercase
+				position: absolute
+				left: 27px
+				padding-left: 6px
+				padding-right: 6px
+				top: -9px
+				background-color: #fff
+			&__wrap
+				border: 1px solid #d7dfe2
+				border-radius: 30px
+				height: 54px
+				font-size: 18px
+				padding-top: 20px
+				padding-bottom: 20px
+				padding-left: 30px
+				padding-right: 30px
+				font-weight: 500
+				height: 110px
+
+	&__wrap
+		resize: none
+		overflow: hidden
+		
+	
 				
 .select
 	&__title
@@ -274,6 +310,11 @@ input, .btn, .slick-slide, textarea
 	&__nav
 		li
 			margin-right: 20px
+			&:first-of-type
+				display: none
+		a
+			&:hover
+				color: #ffffff
 		
 	&__blank-links
 		margin-left: auto
@@ -285,6 +326,9 @@ input, .btn, .slick-slide, textarea
 
 		a
 			border-bottom: 1px dashed #50686f
+			&:hover
+				color: #01aef2
+				border-color: transparent
 
 		
 
@@ -299,6 +343,9 @@ input, .btn, .slick-slide, textarea
 
 .socials
 	li
+		margin-right: 12px
+		&:last-of-type
+			margin-right: 0
 	a
 		position: relative
 		display: block
@@ -326,7 +373,7 @@ input, .btn, .slick-slide, textarea
 		padding-bottom: 20px
 
 	&__logo
-		margin-right: 50px
+		// margin-right: 50px
 		
 	&__links
 		padding-top: 12px
@@ -362,13 +409,15 @@ input, .btn, .slick-slide, textarea
 		width: calc(100% - 44px)
 		
 	&__title
+		font-size: 16px
 		color: #9fa5a8
 		font-weight: 500
 
 	&__text
 		font-size: 16px
 		a
-
+			&:hover
+				color: #f93446
 	&__
 		
 		
@@ -427,6 +476,7 @@ input, .btn, .slick-slide, textarea
 		color: #002a35
 	&__list
 		margin-right: 75px
+		width: 700px
 		li
 			margin-right: 35px
 			position: relative
@@ -503,8 +553,12 @@ input, .btn, .slick-slide, textarea
 			a
 				font-weight: 500
 				
-
-
+	&__search
+		width: calc(100% - 700px - 75px)
+		
+	&__hum
+		display: none
+		
 .search-block
 	display: flex
 	flex-wrap wrap
@@ -626,11 +680,16 @@ input, .btn, .slick-slide, textarea
 		
 	&__steps
 		padding-top: 40px
-		padding-bottom: 45px
+		padding-left: 70px
+		padding-right: 90px
 		
 	&__form
+		margin-top: 45px
 		border-radius: 4px
 		overflow: hidden
+		max-width: 985px
+		margin-left: auto
+		margin-right: auto
 		
 
 .steps
@@ -758,6 +817,8 @@ input, .btn, .slick-slide, textarea
 		padding-top: 28px
 		padding-bottom: 22px
 		transition: .3s
+		padding-left: 15px
+		padding-right: 15px
 		
 					
 		
@@ -868,6 +929,7 @@ input, .btn, .slick-slide, textarea
 	font-size: 30px
 	line-height: 40px
 	text-align: center
+	font-weight: 600
 
 
 .catalog
@@ -969,6 +1031,7 @@ input, .btn, .slick-slide, textarea
 
 	&__btn
 		width: 260px
+		margin-top: 10px
 
 	&__data
 		display: none
@@ -1455,6 +1518,10 @@ input, .btn, .slick-slide, textarea
 	&__text
 		font-size: 16px
 		line-height: 24px
+		a
+			&:hover
+				color: #f93446
+
 
 		
 		
@@ -1556,13 +1623,263 @@ input, .btn, .slick-slide, textarea
 		
 		
 		
+.map
+	position: relative
+	&__item
+		height: 500px
+
+	&__nav
+		z-index: 1
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 50%
+		margin-left: -590px
+		width: 500px
+		background: rgba(255,255,255,.9)
+		padding: 65px 50px
+		&-title
+			text-align: left
+			font-weight: 600
+			margin-bottom: 23px
+			margin-left: -21px
+		&-list
+			font-size: 16px
+			line-height: 22px
+			li
+				position: relative
+				margin-bottom: 14px
+				width: 100%
+				&:before, &:after
+					content: ''
+					display: block
+					position: absolute
+					top: 2px
+					left: -21px
+					width: 12px
+					height: 16px
+					transition: .3s
+				&:before
+					background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAABq0lEQVQ4T21RPU/bUBQ9x2aABX5CB1Rgo4KBSCCkDsGBxHyIKjKkI4iqUvsb8huKhBCsJJgIRBMTsJOhEmUIAxJsFMTAT4AFBuxb+cUBJ+JN9953zj3nnUd0HLtaHQh8/VM41nT/0kqnb+IQtpoIuE1iMg4Qwamm+6stoiIUHW+IIg0QfZ2Kqhc8CJlYNo1rRdh13AaAsQj8VyhbYU3hGoCJaH6+ZKYStB13RIALtUjwp+v5MZnNZv2wL5VK+kt3b53EZ7UAGGXRcVcIbDc3Yt6aTZXjtuyKOyfE76YzrLJYOVkjuRlZmLFmjZN2gjctlOOmA/nGvXJtPNCCs0jywDJTX9oIjrsvwKKKOdAmmM/ntcHRRJh1vwISuxLIhio1fodgKVpw9++iMaBSsh0vJ5CddyONhgS/WqZRUAQRoX3kncYi7OSeWRljkqS8/nTBqX3U4F8B7GlHy1MAfThnTt1G73y7Lh55PyjyK04Q8udyxlhvzV4V3qzVDgBZaAJ4aGWmFkMr7xLU79brfS/P/nlYd3XrY9lk8iGu2KbQuihUqx/COpdO33e+/j9Y6KASHWVZYgAAAABJRU5ErkJggg==')
+				&:after
+					opacity: 0
+					background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAABfklEQVQ4T3WRMS8EURSFzxnbKHYm/AGFEBVCQWIjUShomJ3NJkJpsyLhN/gNJCK0RCL7ZmkoFJKlsIUElRCFP4CZLTRrr8x7s+wsXvXeefd799zziPblh/0gh7Uscous/dhawu+DH/YT2AMw2fZGRYBCEzRAKRyghWsAzq+ORgikgXHk7AcNUIXXIMbi4kuh7GpdWASQMfZQFc8eJ9T7CGndxMUXUk9PI89PfT6SDqZq5wCmzEiNUUKFy6T2DgHmkbVPErb8cI7AsQFQIFStSMqOFiizcJ2zBFAOZig8NQBXog4TJK5in0o8O5eIUYUlEF7cIUNsiMXBWpR1rx4UPGxAtqO9Ba4KZCF+4Fnu01H0APxgkeD+P5HGzWUJWefAACJkuVb5jvA3eSVuehKk/Px0KeijxTsAnW31H9KQIeScJ2O5dalgjeRmqyQi6/CcraaWBIw1BcCNC8ripr3Iyt+A/t1Xh6lUVY9Wr48h3x0kYv4zGfXWo3Wv66X9/gtsgolFVvwhpgAAAABJRU5ErkJggg==')
+					
+				&.ui-tabs-active, &:hover
+					&:before
+						opacity: 0
+					&:after
+						opacity: 1
+		
+					a
+						color: #01aef2
+		
+	&__address
+		font-size: 18px
+		font-family: $font-family-1
+		margin-bottom: 13px
+
+	&__text
+		font-family: $font-family-1
+		font-size: 16px
+		line-height: 22px
+		font-weight: 700
+
+		
+		
+.ymaps-2-1-69-balloon
+	border: none
+	box-shadow: none
+	width: 380px
+
+.ymaps-2-1-69-balloon__layout
+	border-radius: 15px
+	// padding: 10px
+
+.ymaps-2-1-69-balloon__content
+	padding: 23px 20px 15px
+
+
+.footer
+	&__body
+		padding-top: 50px
+		padding-bottom: 48px
+		background-color: #f1f7f9
+	
+	&__logo
+		width: 118px
+		margin-right: 54px
+
+	&__nav
+		width: 300px
+		padding-top: 10px
+		margin-right: 75px
+		ul
+			flex-direction: column
+		li
+			font-size: 15px
+			width: 100%
+			margin-bottom: 6px
+		a
+			color: #868d91
+			&:hover
+				color: #137ead
+				border-color: #137ead
+		
+
+	&__content
+		width: 315px
+		
+	&__address
+		margin-bottom: 15px
+		&-text
+			font-size: 16px
+		&-link
+			font-size: 14px
+			margin-top: 4px
+			a
+				color: #137ead
+				border-color: #137ead
+				&:hover
+					border-color: transparent
+		
+	&__blank-links
+		margin-left: auto
+		width: 185px
+
+	&__apps
+	
+
+	&__app
+		display: block
+		opacity: .6
+		margin-bottom: 13px
+		width: 170px
+		margin-left: auto
+		&:last-of-type
+			margin-bottom: 0
+		&:hover
+			opacity: 1
+	&__dev
+		font-size: 14px
+		margin-top: 34px
+		a
+			border-color: $color-1
+			&:hover
+				border-color: transparent
+		
+	&__feedback
+
+		
+		
+		
+		
+	&__foot
+		font-size: 14px
+		padding-top: 22px
+		padding-bottom: 20px
+		background-color: #e7eef0
+		color: #a5acaf
+	
+	&__desc
+		a
+			color: #a5acaf
+			border-color: #a5acaf
+			&:hover
+				border-color: transparent
+
+	&__socials
+		margin-left: auto
+			
+.popup
+	display: none
+	font-family: $font-family-1
+	border-radius: 4px
+	&_small
+		padding: 1px
+		width: 410px
+	&_large
+		width: 1170px
+		padding: 25px
+		.popup
+			&__title
+				text-align: left
+
+			&__wrap
+				max-height: 400px
+				overflow-y: auto
+				padding-right: 20px
+				margin-top: 20px
+				h2
+					font-size: 23px
+					margin-bottom: 10px
+				p
+					margin-bottom: 20px
+
+				h3
+					font-size: 20px
+					margin-bottom: 10px
+				
+				
+	&__wrap
+		margin-top: 45px
+		.form
+			&__input, &__btn
+				width: 100%
+				margin-left: 0
+			&__input, &__textarea
+				margin-bottom: 25px
+				
+	&__body
+		padding: 45px 65px 25px
+		
+	&__desc
+		font-size: 22px
+		text-align: center
+
+	&__foot
+		font-size: 13px
+		color: #959b9f
+		background-color: #f1f7f9
+		text-align: center
+		padding: 15px 52px 17px
+		a
+			color: #1f84ac
+			border-color: #1f84ac
+			&:hover
+				border-color: transparent
 		
 		
 
 		
 
+.img-apps
+	padding-bottom: 50px
 
+.apps
+	padding-top: 10px
+	a
+		vertical-align: middle
+		display: inline-block
+		opacity: .6
+		margin-right: 10px
+		&:last-of-type
+			margin-right: 0
+		&:hover
+			opacity: 1
 		
+.error-text
+	display: none
+	font-size: 12px
+	color: #f93446
+	margin-top: 5px
+	font-weight: 700
+	text-align: center
+		
+
+
+
+
 @keyframes pulse1
 	0%
 		box-shadow: 0 0 0 0 rgba(249,52,70, 0.1)
