@@ -643,12 +643,16 @@
     margin-top: 20px; }
   .footer__foot {
     text-align: center; }
-  .popup__body {
-    padding: 25px 15px; }
-  .popup__title, .popup__input, .popup__textarea {
-    margin-bottom: 15px; }
-  .popup__wrap {
-    margin-top: 25px; }
+  .popup {
+    width: 95%; }
+    .popup__body {
+      padding: 25px 15px; }
+    .popup__title, .popup__input, .popup__textarea {
+      margin-bottom: 15px; }
+    .popup__wrap {
+      margin-top: 25px; }
+    .popup__title + .popup__desc {
+      margin-top: -15px; }
   .subpage {
     padding-bottom: 20px; } }
 

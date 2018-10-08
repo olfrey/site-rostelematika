@@ -354,8 +354,10 @@ input, textarea, button {
             border-radius: 3px;
     background-color: #f1f7f9;
     position: absolute;
-    top: 46px;
+    top: 46px !important;
     bottom: auto !important; }
+    .select .jq-selectbox__dropdown ul {
+      max-height: 100% !important; }
     .select .jq-selectbox__dropdown li {
       width: 100%;
       padding: 5px 20px;
