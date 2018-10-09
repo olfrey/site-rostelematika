@@ -129,4 +129,13 @@ $(document).ready(function($) {
 	    return false;
 		}
 	});
+
+	$('.nav__list li.has-subnav > a').click(function(event) {
+		var windowWidth = $(window).width();
+		if (windowWidth < 992) {
+			event.preventDefault();
+			var ul = $(this).next('ul');
+			ul.slideToggle(300);
+		}
+	});
 });

@@ -311,8 +311,10 @@ input, textarea, button {
   margin-bottom: 5px;
   display: block; }
 
-.select__wrap select {
-  display: none; }
+.select__wrap {
+  position: relative; }
+  .select__wrap select {
+    display: none; }
 
 .select .jq-selectbox {
   position: relative; }
@@ -1124,10 +1126,8 @@ input, .btn, .slick-slide, textarea {
     position: relative;
     width: 100%;
     height: 360px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    overflow: hidden; }
     .catalog__item_small {
       width: -webkit-calc(50% - 15px);
       width: calc(50% - 15px); }
@@ -1144,7 +1144,27 @@ input, .btn, .slick-slide, textarea {
           font-size: 20px;
           content: '...';
           padding-bottom: 8px; }
+    .catalog__item:hover .catalog__img {
+      -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+              transform: scale(1.1); }
+  .catalog__img {
+    z-index: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: .5s;
+    transition: .5s;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1); }
   .catalog__data {
+    z-index: 2;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1931,6 +1951,12 @@ input, .btn, .slick-slide, textarea {
       .popup_large .popup__wrap h3 {
         font-size: 20px;
         margin-bottom: 10px; }
+  .popup_thanks .popup__body {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 50px; }
+  .popup_thanks .popup__desc {
+    margin-top: 10px; }
   .popup__wrap {
     margin-top: 45px; }
     .popup__wrap .form__input, .popup__wrap .form__btn {

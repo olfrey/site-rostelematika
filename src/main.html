@@ -171,12 +171,12 @@
 						<div class="form__body row">
 							<div class="form__input input input_border-gray input_large">
 								<label class="input__title">Ваше имя</label>
-								<input type="text" class="input__wrap">
+								<input type="text" class="input__wrap" name="name" placeholder="Иван">
 								<div class="error-text">Заполните объязательное поле</div>
 							</div>
 							<div class="form__input input input_border-gray input_large input_phone">
 								<label class="input__title">телефон</label>
-								<input type="tel" class="input__wrap">
+								<input type="tel" class="input__wrap" name="tel" placeholder="+7 (   )">
 								<div class="error-text">Заполните объязательное поле</div>
 							</div>
 							<button class="form__btn btn btn_bg-red btn_border-red btn_italic btn_large">Попробовать</button>
@@ -268,7 +268,8 @@
 				<div class="catalog__title title">Готовые решения «под ключ» для разных сфер бизнеса</div>
 				<div class="catalog__list row">
 					<div class="catalog__group row">
-						<div class="catalog__item kp-item" style="background-image: url('upload/catalog/1.jpg');">
+						<div class="catalog__item kp-item">
+							<div class="catalog__img" style="background-image: url('upload/catalog/1.jpg');"></div>
 							<div class="catalog__data row i-mid">
 								<div class="catalog__name kp-title">Грузовики</div>
 								<a href="" class="catalog__btn btn btn_border-gray btn_hover-bg-blue btn_small btn_italic">Подробнее</a>
@@ -277,14 +278,16 @@
 						</div>
 					</div>
 					<div class="catalog__group row">
-						<div class="catalog__item kp-item catalog__item_small" style="background-image: url('upload/catalog/2.jpg');">
+						<div class="catalog__item kp-item catalog__item_small">
+							<div class="catalog__img" style="background-image: url('upload/catalog/2.jpg');"></div>
 							<div class="catalog__data row i-mid">
 								<div class="catalog__name kp-title">Спец. техника</div>
 								<a href="" class="catalog__btn btn btn_border-gray btn_hover-bg-blue btn_small btn_italic">Подробнее</a>
 								<a data-fancybox data-src="#popup-kp" href="javascript:;" class="catalog__btn btn btn_bg-red btn_border-red btn_italic  btn_small">Получить КП</a>
 							</div>
 						</div>
-						<div class="catalog__item kp-item catalog__item_small" style="background-image: url('upload/catalog/3.jpg');">
+						<div class="catalog__item kp-item catalog__item_small">
+							<div class="catalog__img" style="background-image: url('upload/catalog/3.jpg');"></div>
 							<div class="catalog__data row i-mid">
 								<div class="catalog__name kp-title">Топливозаправщики</div>
 								<a href="" class="catalog__btn btn btn_border-gray btn_hover-bg-blue btn_small btn_italic">Подробнее</a>
@@ -293,7 +296,8 @@
 						</div>
 					</div>
 					<div class="catalog__group row">
-						<div class="catalog__item kp-item" style="background-image: url('upload/catalog/4.jpg');">
+						<div class="catalog__item kp-item">
+							<div class="catalog__img" style="background-image: url('upload/catalog/4.jpg');"></div>
 							<div class="catalog__data row i-mid">
 								<div class="catalog__name kp-title">Тракторы и с/х техника</div>
 								<a href="" class="catalog__btn btn btn_border-gray btn_hover-bg-blue btn_small btn_italic">Подробнее</a>
@@ -302,7 +306,8 @@
 						</div>
 					</div>
 					<div class="catalog__group row">
-						<div class="catalog__item kp-item" style="background-image: url('upload/catalog/5.jpg');">
+						<div class="catalog__item kp-item">
+							<div class="catalog__img" style="background-image: url('upload/catalog/5.jpg');"></div>
 							<div class="catalog__data row i-mid">
 								<div class="catalog__name kp-title">Воздушный транспорт</div>
 								<a href="" class="catalog__btn btn btn_border-gray btn_hover-bg-blue btn_small btn_italic">Подробнее</a>
@@ -311,14 +316,16 @@
 						</div>
 					</div>
 					<div class="catalog__group row">
-						<div class="catalog__item kp-item catalog__item_small" style="background-image: url('upload/catalog/6.jpg');">
+						<div class="catalog__item kp-item catalog__item_small">
+							<div class="catalog__img" style="background-image: url('upload/catalog/6.jpg');"></div>
 							<div class="catalog__data row i-mid">
 								<div class="catalog__name kp-title">Такси</div>
 								<a href="" class="catalog__btn btn btn_border-gray btn_hover-bg-blue btn_small btn_italic">Подробнее</a>
 								<a data-fancybox data-src="#popup-kp" href="javascript:;" class="catalog__btn btn btn_bg-red btn_border-red btn_italic  btn_small">Получить КП</a>
 							</div>
 						</div>
-						<div class="catalog__item kp-item catalog__item_small" style="background-image: url('upload/catalog/7.jpg');">
+						<div class="catalog__item kp-item catalog__item_small">
+							<div class="catalog__img" style="background-image: url('upload/catalog/7.jpg');"></div>
 							<div class="catalog__data row i-mid">
 								<div class="catalog__name kp-title">Поезда</div>
 								<a href="" class="catalog__btn btn btn_border-gray btn_hover-bg-blue btn_small btn_italic">Подробнее</a>
@@ -327,7 +334,8 @@
 						</div>
 					</div>
 					<div class="catalog__group row">
-						<div class="catalog__item kp-item" style="background-image: url('upload/catalog/8.jpg');">
+						<div class="catalog__item kp-item">
+							<div class="catalog__img" style="background-image: url('upload/catalog/8.jpg');"></div>
 							<div class="catalog__data row i-mid">
 								<div class="catalog__name kp-title">Легковой транспорт</div>
 								<a href="" class="catalog__btn btn btn_border-gray btn_hover-bg-blue btn_small btn_italic">Подробнее</a>
@@ -490,17 +498,17 @@
 					<form class="kp__form">
 						<div class="kp__row row">
 							<div class="kp__input input input_border-gray input_large">
-								<input type="text" class="input__wrap" placeholder="Ваше имя">
+								<input type="text" class="input__wrap" name="name" placeholder="Ваше имя">
 								<div class="error-text">Заполните объязательное поле</div>
 							</div>
 						</div>
 						<div class="kp__row row">
 							<div class="kp__input kp__input_small input input_border-gray input_large input_phone">
-								<input type="text" class="input__wrap" placeholder="Телефон">
+								<input type="text" class="input__wrap" name="tel" placeholder="Телефон">
 								<div class="error-text">Заполните объязательное поле</div>
 							</div>
 							<div class="kp__input kp__input_small input input_border-gray input_large">
-								<input type="text" class="input__wrap" placeholder="E-mail">
+								<input type="text" class="input__wrap" name="email" placeholder="E-mail">
 								<div class="error-text">Заполните объязательное поле</div>
 							</div>
 						</div>
@@ -538,7 +546,7 @@
 						<div class="feedback__phone"><img src="upload/svg/phone-call.svg" width="23"><a href="tel:+78632260528">8 (8632) 26-05-28</a></div>
 						<div class="feedback__time">Пн-Пт с 7:00 до 19:00</div>
 						<div class="feedback__btns row i-mid">
-							<a data-fancybox data-src="#popup-callback" href="javascript:;" class="feedback__callback btn btn_bg-red btn_border-red btn_italic btn_small">Вам перезвонить?</a>
+							<a data-fancybox data-src="#popup-director" href="javascript:;" class="feedback__callback btn btn_bg-red btn_border-red btn_italic btn_small">Вам перезвонить?</a>
 							<div class="feedback__messagers messagers">
 								<ul>
 									<li><a href=""><img src="upload/svg/skype.svg" width="38"></a></li>
@@ -579,22 +587,22 @@
 		<form class="popup__wrap">
 			<div class="form__input input input_border-gray input_large">
 				<label class="input__title">Ваше имя</label>
-				<input type="text" class="input__wrap">
+				<input type="text" class="input__wrap" name="name" placeholder="Иван">
 				<div class="error-text">Заполните объязательное поле</div>
 			</div>
 			<div class="form__input input input_border-gray input_large input_phone">
 				<label class="input__title">телефон</label>
-				<input type="text" class="input__wrap">
+				<input type="text" class="input__wrap" name="tel" placeholder="+7 (   )">
 				<div class="error-text">Заполните объязательное поле</div>
 			</div>
 			<div class="form__input input input_border-gray input_large">
 				<label class="input__title">e-mail</label>
-				<input type="text" class="input__wrap">
+				<input type="text" class="input__wrap" name="email" placeholder="ivan@mail.ru">
 				<div class="error-text">Заполните объязательное поле</div>
 			</div>
 			<div class="form__textarea textarea textarea_border-gray textarea_large">
 				<label class="textarea__title">сообщение</label>
-				<textarea class="textarea__wrap"></textarea>
+				<textarea class="textarea__wrap" name="message"></textarea>
 				<div class="error-text">Заполните объязательное поле</div>
 			</div>
 			<button class="form__btn btn btn_bg-red btn_border-red btn_italic btn_large">Отправить заявку</button>
@@ -611,12 +619,12 @@
 		<form class="popup__wrap">
 			<div class="form__input input input_border-gray input_large">
 				<label class="input__title">Ваше имя</label>
-				<input type="text" class="input__wrap">
+				<input type="text" class="input__wrap" name="name" placeholder="Иван">
 				<div class="error-text">Заполните объязательное поле</div>
 			</div>
 			<div class="form__input input input_border-gray input_large input_phone">
 				<label class="input__title">телефон</label>
-				<input type="text" class="input__wrap">
+				<input type="text" class="input__wrap" name="tel" placeholder="+7 (   )">
 				<div class="error-text">Заполните объязательное поле</div>
 			</div>
 			<button class="form__btn btn btn_bg-red btn_border-red btn_italic btn_large">Попробовать</button>
@@ -627,6 +635,13 @@
 	</div>
 </div>
 
+<div class="popup popup_small popup_thanks" id="popup-thanks">
+	<div class="popup__body">
+		<div class="popup__title title">Спасибо за заявку!</div>
+		<div class="popup__desc">Мы скоро свяжемся с Вами!</div>
+	</div>
+</div>
+
 <div class="popup popup_small" id="popup-kp">
 	<div class="popup__body">
 		<div class="popup__title title">Получить КП</div>
@@ -634,17 +649,17 @@
 		<form class="popup__wrap">
 		<div class="form__input input input_border-gray input_large">
 			<label class="input__title">Ваше имя</label>
-			<input type="text" class="input__wrap">
+			<input type="text" class="input__wrap" name="name" placeholder="Иван">
 			<div class="error-text">Заполните объязательное поле</div>
 		</div>
 		<div class="form__input input input_border-gray input_large input_phone">
 			<label class="input__title">телефон</label>
-			<input type="text" class="input__wrap">
+			<input type="text" class="input__wrap" name="tel" placeholder="+7 (   )">
 			<div class="error-text">Заполните объязательное поле</div>
 		</div>
 		<div class="form__input input input_border-gray input_large">
 			<label class="input__title">e-mail</label>
-			<input type="text" class="input__wrap">
+			<input type="text" class="input__wrap" name="email" placeholder="ivan@mail.ru">
 			<div class="error-text">Заполните объязательное поле</div>
 		</div>
 		<input type="hidden" name="kp-title" id="kp-input">
